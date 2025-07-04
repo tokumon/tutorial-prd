@@ -1,2 +1,2 @@
 # tutorial-prd
-PRDをGit管理するチュートリアル
+- PRDをGit管理するチュートリアル
