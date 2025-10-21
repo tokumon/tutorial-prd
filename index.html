@@ -284,6 +284,24 @@
             const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             document.documentElement.style.setProperty('--scroll-progress', scrolled + '%');
         });
+
+        // iframeの高さを動的に調整
+        function adjustIframeHeight() {
+            const iframe = document.querySelector('.contact-form');
+            if (iframe) {
+                const windowHeight = window.innerHeight;
+                const viewportHeight = windowHeight * 0.6; // ビューポートの60%に制限
+                const maxHeight = Math.min(600, viewportHeight);
+                const minHeight = 400;
+                const finalHeight = Math.max(minHeight, maxHeight);
+                
+                iframe.style.height = finalHeight + 'px';
+            }
+        }
+
+        // ページ読み込み時とリサイズ時に調整
+        window.addEventListener('load', adjustIframeHeight);
+        window.addEventListener('resize', adjustIframeHeight);
     </script>
 </body>
 </html> 
