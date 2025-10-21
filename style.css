@@ -383,6 +383,27 @@ section {
     align-items: center;
 }
 
+/* フォームセクション */
+.form-section {
+    background: var(--bg-light);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.contact-form {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+}
+
 .community-description {
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -505,6 +526,14 @@ section {
     .basics-grid {
         grid-template-columns: 1fr;
     }
+    
+    .form-container {
+        margin: 0 1rem;
+    }
+    
+    .contact-form {
+        height: 500px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -526,6 +555,10 @@ section {
     
     .section-title {
         font-size: 1.75rem;
+    }
+    
+    .contact-form {
+        height: 400px;
     }
 }
 
